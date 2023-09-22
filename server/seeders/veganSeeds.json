@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Broccoli and peanut soba noodles",
+   " description":
+      "The fresh greens are a great combination with the noodles while the roasted peanuts adds a crunchy texture to the dish.",
+    "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Spinach, chickpea and potato curry",
+   " description":
+      "Our gently spiced vegan curry packed with spinach, chickpeas and potato makes for a wholesome midweek meal for four.",
+    "price": "$12.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Vegan gumbo",
+   " description":
+      "Try this veg-packed gumbo, inspired by the classic Southern dish, for a vegan dish that’s as healthy as it is filling.",
+    "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Vegan aubergine curry",
+   " description":
+      "Cook aubergine pieces with fragrant spices and red lentils for a hearty yet healthy vegan curry that serves four.",
+    "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Moroccan veggie soup",
+   " description":
+      "Check out our easy Moroccan vegan soup recipe with lemons, chickpeas and plenty of spice.",
+    "price": "$8.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Vegan chilli tofu ramen",
+   " description":
+      "This chilli tofu version is plant-based and packed with loads of fresh flavours.",
+    "price": "$14.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Vegan quinoa and black bean chilli",
+   " description":
+      " Check out this quick and easy vegan chilli recipe. Our quinoa and black bean chilli is high in protein, fibre and vegan – but still tastes impossibly creamy.",
+    "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Shredded veg miso soup",
+   " description":
+      "Shred ginger, leeks and carrots into this umami-rich soup and top up with quinoa and kale for a nourishing, light meal.",
+    "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Vegan sweet potato soup",
+   " description":
+      "Check out this easy vegan soup recipe with sweet potato and groundnut. Packed with punchy chilli and smooth peanut butter this flavoursome soup is super creamy, and totally satisfying.",
+    "price": "$.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  },
+  {
+    "name": "Moroccan tagine",
+   " description":
+      "This recipe for Moroccan veg and chickpea tagine is vegan, low-fat and really easy to make. This makes enough for four, but the leftovers freeze well.",
+    "price": "$.99",
+    "quantity": 1,
+    "category": "categories[5]._id"
+  }
+]
