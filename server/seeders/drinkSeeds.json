@@ -4,7 +4,7 @@
     "name": "Chocolate Keto Protein Shake",
    " description":
       "Chocolate Keto Protein Shake is packed with almond milk, almond butter, chia seeds, and hemp seeds",
-    "image": "latte.jpg",
+    "image": "ChocolateProtein.jpg",
     "price": "$7.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -13,7 +13,7 @@
     "name": "Peanut Butter Banana Smoothie",
    " description":
       "Peanut butter Banana Smoothie is packed with protein, low in carbs, and is a very satisfying and delicious. It's perfect in post-workout smoothies or pre-workout snacks",
-    "image": "latte.jpg",
+    "image": "Peanutbutterbanana.jfif",
     "price": "$7.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -22,7 +22,7 @@
     "name": "Keto Smoothie",
    " description":
       "Popular smoothie fruits like bananas or pineapples are a no-go on keto, so we've replaced them with lower carb raspberries, strawberries, and blackberries here.",
-    "image": "latte.jpg",
+    "image": "KetoSmoothie.jpg",
     "price": "$7.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -31,7 +31,7 @@
     "name": "Blueberry Smoothie",
    " description":
       "Blueberry Smoothie is an excellent source of antioxidants and phytonutrients, which help to reduce inflammation, improve digestion, boost the immune system.",
-    "image": "latte.jpg",
+    "image": "BlueberrySmoothie.jpg",
     "price": "$8.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -40,7 +40,7 @@
     "name": "Perfect Green Smoothie",
    " description":
       "Green smoothies combine leafy greens like spinach, kale, arugula, and microgreens with a base liquid like water.",
-    "image": "latte.jpg",
+    "image": "GreenSmoothie.jfif",
     "price": "$8.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -49,7 +49,7 @@
     "name": "Avocado Smoothie",
    " description":
       "An Avocado smoothie is a creamy and nutritious beverage made primarily with ripe avocados blended with other ingredients to create a smooth, satisfying drink",
-    "image": "latte.jpg",
+    "image": "avocadosmoothie.jpg",
     "price": "$8.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -58,7 +58,7 @@
     "name": "Mango smoothie",
    " description":
       "Mango smoothie is a refreshing and tropical beverage made by blending ripe mangoes with other ingredients like yogurt, milk (or dairy-free alternatives), and sweeteners ",
-    "image": "latte.jpg",
+    "image": "mangosmoothie.jfif",
     "price": "$8.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -67,7 +67,7 @@
     "name": "Tea",
    " description":
       "Tea is a popular beverage made by steeping dried tea leaves or herbs in hot water.",
-    "image": "latte.jpg",
+    "image": "tea.png",
     "price": "$2.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -76,7 +76,7 @@
     "name": "Coeffe",
    " description":
       "Coffee is a popular and widely consumed beverage made by brewing roasted coffee beans.",
-    "image": "latte.jpg",
+    "image": "Coeffe.jfif",
     "price": "$2.99",
     "quantity": 1,
     "category": "categories[1]._id"
@@ -85,7 +85,7 @@
     "name": "Diet Coke",
    " description":
       "Diet Coke is a popular sugar-free and calorie-free soft drink.",
-    "image": "latte.jpg",
+    "image": "coke.jfif",
     "price": "$2.99",
     "quantity": 1,
     "category": "categories[1]._id"
