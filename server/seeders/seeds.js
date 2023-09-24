@@ -9,6 +9,7 @@ const drinkSeeds = require('./drinkSeeds.json');
 const dessertsSeeds = require('./dessertsSeeds.json');
 const CategoriesSeeds = require('./categoriesSeeds.json');
 
+
 db.once('open', async () => { 
   try{
   

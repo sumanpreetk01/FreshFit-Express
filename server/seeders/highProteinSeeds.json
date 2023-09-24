@@ -4,7 +4,7 @@
     "name": "Balsamic Chicken Breast",
    " description":
       "We made our chicken with vegetable brown rice (carrots and corn added) and kale lightly sautéed in olive oil.",
-    "image": "",
+    "image": "BalsamicChickenBreast.jfif",
     "price": "$11.99",
     "quantity": 1,
     "category": "categories[3]._id"
@@ -13,7 +13,7 @@
     "name": "Broiled Asian Cod",
    " description":
       "Boy Choy: Also known as Chinese cabbage, bok choy offers low-calories roughage (12 calories per 100 grams), and it’s high in vitamins A, B6, C, and K. ",
-    "image": "",
+    "image": "BroiledAsianCod.jfif",
     "price": "$14.99",
     "quantity": 1,
     "category": "categories[3]._id"
@@ -22,7 +22,7 @@
     "name": "Turkey Stew",
    " description":
       "Turkey stew is a delicious and comforting dish made with turkey meat and a variety of vegetables and seasonings.",
-    "image": "",
+    "image": "TurkeyStew.jfif",
     "price": "$13.99",
     "quantity": 1,
     "category": "categories[3]._id"
@@ -31,7 +31,7 @@
     "name": "Lean Beef Meat Loaf",
    " description":
       "Lean beef meatloaf is a dish made from ground beef that contains a lower fat content compared to traditional meatloaf recipes.",
-    "image": "",
+    "image": "BeefMeatloaf.jfif",
     "price": "$16.99",
     "quantity": 1,
     "category": "categories[3]._id"
@@ -40,7 +40,7 @@
     "name": "Broiled Ginger Salmon",
    " description":
       "Broiled ginger salmon is a delicious and healthy dish that combines the bold flavors of ginger and salmon.",
-    "image": "",
+    "image": "BroiledGingerSalmon.jfif",
     "price": "$9.99",
     "quantity": 1,
     "category": "categories[3]._id"
@@ -48,7 +48,7 @@
   {
     "name": "Spicy Shrimp Spinach Caesar Salad",
    " description":
-      "",
+      "shrimps.webp",
     "image": "The protein in this salad comes from crispy baked shrimp, a luxurious Caesar dressing egg yolk and anchovy paste, and a sprinkle of Parmesan cheese for good measure. ",
     "price": "$12.99",
     "quantity": 1,
@@ -57,7 +57,7 @@
   {
     "name": "Cheesy Chicken Enchilada Pasta",
    " description":
-      "",
+      "cheesy-chicken-enchilada-pasta.webp",
     "image": "Who knew two perfect foods (enchiladas and pasta) could come together to make something even better? It's creamy. It's cheesy. It's full of protein.",
     "price": "$15.99",
     "quantity": 1,
@@ -67,17 +67,16 @@
     "name": "Easy Salmon Piccata",
    " description":
       "If you already love chicken piccata—the briny, lemony, caper-packed Italian favorite—you'll be obsessed with this speedy salmon version, which comes together entirely in one pan and is perfect for weeknight dinners.",
-    "image": "",
+    "image": "cafe-delites-Salmon-Piccata.webp",
     "price": "$7.99",
     "quantity": 1,
     "category": "categories[3]._id"
   },
   {
     "name": "Tilapia in Parchment With Tomato and Broccoli Over Rice",
-   " description":
-      "",
-    "image": "Baked tilapia is one of the healthiest options for cooking tilapia.One of the delicious meal we have",
-    "price": "$7.99",
+     "description": "Baked tilapia is one of the healthiest options for cooking tilapia.One of the delicious meal we have",
+     " img":"tilapia-tomato-broccoli-rice.webp",
+     "price": "$7.99",
     "quantity": 1,
     "category": "categories[3]._id"
   },
