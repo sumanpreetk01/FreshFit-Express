@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Chinese Broccoli With Soy Paste",
+   " description":
+      "This dish is all about the sweet and salty soy paste, which balances out the bitterness of the broccoli.",
+      "img":"Chinese-Broccoli.webp",
+      "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Poached Cod in Tomato Curry",
+   " description":
+      "We opted to use cherry tomatoes for this poached cod recipe because we like their sweetness and how quickly they collapse into a sauce.",
+      "img":"poached_Tomato_Curry_16x9.webp",
+      "price": "$10.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Fresh Pepper Kung Pao Chicken",
+   " description":
+      "Fresh Pepper Kung Pao Chicken is a popular Chinese stir-fry dish known for its bold flavors and a combination of tender chicken, crunchy peanuts, and colorful bell peppers. ",
+      "img":"Fresh Pepper Kung Pao Chicken.jfif",
+      "price": "$9.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Green-Garlic-Rubbed Buttery Roast Chicken",
+   " description":
+      "As the chicken cooks low and slow, the green garlic and turns into a crispy crumb topping.",
+      "img":"Garlic-Rubbed-Buttery-Roast-Chicken.webp",
+      "price": "$.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Pork and Asparagus Stir-Fry",
+   " description":
+      "A Sichuan-inspired stir-fry of blistered yet snappy asparagus and crispy pork in an aromatic sauce",
+      "img":"Picky-Eaters-Pork-Asparagus-Stir-Fry.webp",
+      "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Tangy Vinegar Chicken",
+   " description":
+      "Fresh Pepper Kung Pao Chicken is a popular Chinese stir-fry dish known for its bold flavors and a combination of tender chicken, crunchy peanuts, and colorful bell peppers.",
+      "img":"Tangy-Vinegar-Chicken.webp",
+      "price": "$10.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Healthyish Chicken Salad",
+   " description": "This is the summery chicken salad you could eat plate after plate of without feeling like you’ve downed a jar of mayonnaise—because you didn't!",
+   "img":"Chicken-Salad-16x9.webp",
+   "price": "$11.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Fall-Apart Caramelized Cabbage",
+   " description":
+      "Fall-Apart Caramelized Cabbage is a delicious side dish that features cabbage slow-cooked to perfection until it becomes tender, sweet, and caramelized. ",
+      "img":"Cabbage.webp",
+      "price": "$14.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Saucy Chicken Puttanesca",
+   " description":
+      "Here, chicken legs are gently oven-braised in puttanesca sauce until nearly falling off the bone. ",
+      "img":"Chicken-Puttanesca.webp",
+      "price": "$16.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  },
+  {
+    "name": "Sichuan Boiled Fish",
+   " description":
+      "The flavors of this fish are out of control—super spicy, super intense, super delicious.",
+      "img":"Sichuan Boiled Fish.jfif",
+      "price": "$.99",
+    "quantity": 1,
+    "category": "categories[6]._id"
+  }
+
+]
