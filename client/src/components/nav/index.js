@@ -1,7 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Freshlogo from "../../../public/images/FreshFitExpressLogo.png"
+import Freshlogo from "../../assets/FreshFitExpressLogo.png"
 
 
 function Nav() {
