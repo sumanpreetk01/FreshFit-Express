@@ -17,10 +17,10 @@ function Nav() {
                     <Link to="/orderHistory">Order History</Link>
                 </li>
                 <li className="mx-1">
-                    <Link to="cart">Cart</Link>
+                    <Link to="/cart">Cart</Link>
                 </li>
                 <li className="mx-1">
-                    <Link to="contact">Contact Us</Link>
+                    <Link to="/contact">Contact Us</Link>
                 </li>
                 <li className="mx-1">
                     <a href="/" onClick={() => Auth.logout()}>Logout</a>
@@ -34,7 +34,7 @@ function Nav() {
                         <Link to="/menu">Menu</Link>
                     </li>
                     <li className="mx-1">
-                        <Link to="signUp">Sign Up</Link>
+                        <Link to="/signUp">Sign Up</Link>
                     </li>
                     <li className="mx-1">
                        <Link to="/login">Login</Link>

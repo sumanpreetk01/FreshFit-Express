@@ -1,12 +1,12 @@
 import React from 'react';
 
 import ContactUs from './pages/Contact';
-// import Nav from './components/Nav';
+import Nav from './components/nav';
 
 function App(){
   return (
     <div>
-    {/* <Nav /> */}
+    <Nav />
     <ContactUs />
     </div>
   )
