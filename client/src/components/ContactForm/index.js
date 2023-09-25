@@ -1,6 +1,6 @@
 import React from 'react'
 
-const contactForm = () => {
+const ContactForm = () => {
     //use react hook useState
     const [contactFormStatus, setContactFormStatus] = React.useState('Send')
     const onSubmit = (e) => {
@@ -52,4 +52,4 @@ const contactForm = () => {
 
 }
 
-export default contactForm
+export default ContactForm
