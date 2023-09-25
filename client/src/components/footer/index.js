@@ -11,8 +11,8 @@ function Footer() {
             <a href='#' className='footer-logo'>
             <img src={Freshlogo} alt="Fresh Fit Express Logo"/>
             </a>
-
             <div className='social-media-links'>
+
                 <a href='https://instagram.com'><img src={instagramLogo} alt="Follow us on Instagram"/></a>
                 <a href='https://facebook.com'><img src={facebookLogo} alt="Follow us on Facebook"/></a>
                 <a href='https://www.twitter.com'><img src={twitterLogo} alt="Follow us on Twitter"/></a>
