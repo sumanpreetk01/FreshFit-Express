@@ -1,7 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import logo from "../../../public/images/FreshFitExpressLogo.png"
+import Freshlogo from "../../../public/images/FreshFitExpressLogo.png"
 
 
 function Nav() {
@@ -49,10 +49,10 @@ function Nav() {
         <h1>
           <Link to="/">
             <img
-            src={logo} 
+            src={Freshlogo} 
             alt="Fresh Fit Express Logo"
             style={{
-            height: '40px', 
+             height: '40px', 
              marginRight: '10px' 
                 }}
             />
