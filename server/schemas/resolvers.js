@@ -43,7 +43,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
         if (context.user) {
           const user = await User.findById(context.user._id).populate({
-            path: 'orders.products',
+            path: 'orders.items',
             populate: 'category'
           });
   
@@ -60,7 +60,7 @@ const resolvers = {
         const { items } = await order.populate('items');
   
         for (let i = 0; i < items.length; i++) {
-          const product = await stripe.items.create({
+          const item = await stripe.items.create({
             name: items[i].name,
             description: items[i].description,
             images: [`${url}/images/${items[i].image}`]
@@ -115,10 +115,10 @@ const resolvers = {
   
         throw new AuthenticationError('Not logged in');
       },
-      updateProduct: async (parent, { _id, quantity }) => {
+      updateItem: async (parent, { _id, quantity }) => {
         const decrement = Math.abs(quantity) * -1;
   
-        return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+        return await Item.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
       },
       login: async (parent, { email, password }) => {
         const user = await User.findOne({ email });
