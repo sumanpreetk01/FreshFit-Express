@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Chia and coconut pudding",
+   " description":
+      "Indulge in a taste of tropical paradise with this mouth-watering coconuty dessert containing healthy chia seeds.",
+    "img":"chia-and-coconut-pudding.jpeg",
+      "price": "$8.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Lemon and yoghurt syrup cakes",
+   " description":
+      "Create these tasty syrup cakes that incorporates healthier options of coconut sugar, spelt flour and low-fat Greek yoghurt.",
+      "img":"lemon-and-yoghurt-syrup-cakes.jpeg",
+      "price": "$7.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Gooey peanut butter and chocolate fridge bars",
+   " description":
+      " These bars combine the creamy goodness of peanut butter with rich, sweet chocolate for a decadent treat",
+      "img":"granolaBar.jpg",
+      "price": "$5.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Lemon panna cotta with vodka blueberry syrup",
+   " description":
+      "This lemon panna cotta is very creamy but it's low in fat!",
+      "img":"lemon-panna-cotta.jpeg",
+      "price": "$6.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Strawberry frozen yoghurt",
+   " description":
+      "Your kids will love this health-right snack of strawberry frozen yoghurt.",
+      "img":"strawberry-frozen-yoghurt.jpeg",
+      "price": "$.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Peanut butter ice-cream cups",
+   " description":
+      "Yes, you can give in to temptation - thse gooey peanut butter ice-cream cups are guilt free!",
+      "img":"peanut-butter-ice-cream-cups.jpeg",
+      "price": "$4.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Frozen strawberry cheesecake",
+   " description":
+      "Using buckwheat, almonds, coconut and dates in the base instead of biscuits means this cheesecake cuts down on processed sugars and adds natural goodness. ",
+      "img":"frozen-strawberry-cheesecake.jpeg",
+      "price": "$8.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Banoffee coconut chia puddings",
+   " description":
+      "Try this vegan and sugar-free dessert for a healthy, guilt-free treat.",
+      "img":"banoffee-coconut-chia-puddings.jpeg",
+      "price": "$7.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Healthier no bake fruity cheesecake tarts",
+   " description":
+      "There's no need to miss out on cheesecake with this healthier, no-bake recipe.",
+      "img":"healthier-no-bake-fruity-cheesecake-tarts.jpeg",
+      "price": "$87.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  },
+  {
+    "name": "Mango labne cheesecake",
+   " description":
+      "Make the most of the Aussie mango season with this delicious tart with creamy labne, macadamia base and hint of lime - the perfect light summer treat.",
+      "img":"mango-labne-cheesecake.jpeg",
+      "price": "$7.99",
+    "quantity": 1,
+    "category": "categories[7]._id"
+  }
+]
