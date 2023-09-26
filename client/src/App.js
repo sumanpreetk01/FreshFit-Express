@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ContactUs from './pages/Contact';
-import Nav from './components/nav';
+import Nav from './components/Nav';
 
 function App(){
   return (
