@@ -1,4 +1,4 @@
-const db = require("./connection");
+const db = require("../config/connection.js");
 const {Item,Category,User} = require("../models");
 const highProteinMealSeeds = require('./highProteinSeeds.json');
 const healthySnacksSeeds = require('./healthySnacksSeeds.json');
