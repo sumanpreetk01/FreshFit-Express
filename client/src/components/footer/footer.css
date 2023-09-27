@@ -3,5 +3,33 @@
     color: #d8e7db;
     padding: 20px;
     text-align: center;
+    line-height: 60px;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.social-media-links {
+    margin-top: 20px;
+}
+
+.social-media-links img {
+    width: 30px;
+    height: auto;
+    padding: 5px;
+}
+
+.copyight {
+    margin-top: 20px;
+    color: #d8e7db;
+    font-size: 14px;
 }
 
