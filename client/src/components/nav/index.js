@@ -1,4 +1,5 @@
 import React from "react";
+import './header.css'
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import Freshlogo from "../../assets/FreshFitExpressLogo.png"
@@ -9,34 +10,34 @@ function Nav() {
     function showNavigation() {
         if (Auth.loggedIn()) {
             return (
-            <ul className="flex-row">
-                <li className="mx-1">
+            <ul className="nav-bar">
+                <li className="nav-links">
                     <Link to="/menu">Menu</Link>
                 </li>
-                <li className="mx-1">
+                <li className="nav-links">
                     <Link to="/orderHistory">Order History</Link>
                 </li>
-                <li className="mx-1">
+                <li className="nav-links">
                     <Link to="/cart">Cart</Link>
                 </li>
-                <li className="mx-1">
+                <li className="nav-links">
                     <Link to="/contact">Contact Us</Link>
                 </li>
-                <li className="mx-1">
+                <li className="nav-links">
                     <a href="/" onClick={() => Auth.logout()}>Logout</a>
                 </li>
             </ul>
             );
         } else {
             return (
-                <ul>
-                    <li className="mx-1">
+                <ul className="nav-bar">
+                    <li className="nav-links">
                         <Link to="/menu">Menu</Link>
                     </li>
-                    <li className="mx-1">
+                    <li className="nav-links">
                         <Link to="/signUp">Sign Up</Link>
                     </li>
-                    <li className="mx-1">
+                    <li className="nav-links">
                        <Link to="/login">Login</Link>
                     </li>
                 </ul>
@@ -45,20 +46,20 @@ function Nav() {
     }
 
     return (
-        <header className="flex-row px-1">
-        <h1>
+        <header className="nav-bar">
+       
           <Link to="/">
             <img
             src={Freshlogo} 
             alt="Fresh Fit Express Logo"
-            style={{
-             height: '40px', 
-             marginRight: '10px' 
-                }}
+            // style={{
+            //  height: '40px', 
+            //  marginRight: '10px' 
+            //     }}
             />
-            Fresh Fit Express
+             <h1>Fresh Fit Express </h1>
           </Link>
-        </h1>
+       
   
         <nav>{showNavigation()}</nav>
       </header>
