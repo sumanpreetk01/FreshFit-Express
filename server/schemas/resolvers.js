@@ -1,6 +1,7 @@
 const {Category, Item, Order, User} = require ('../models');
 const {AuthenticationError} = require('apollo-server-express');
 const {signToken} = require('../utils/auth');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 
 
@@ -54,29 +55,26 @@ const resolvers = {
       },
       checkout: async (parent, args, context) => {
         const url = new URL(context.headers.referer).origin;
-        const order = new Order({ items: args.items });
-        const line_items = [];
-  
-        const { items } = await order.populate('items');
-  
-        for (let i = 0; i < items.length; i++) {
-          const item = await stripe.items.create({
-            name: items[i].name,
-            description: items[i].description,
-            images: [`${url}/images/${items[i].image}`]
-          });
-  
-          const price = await stripe.prices.create({
-            item: item.id,
-            unit_amount: items[i].price * 100,
+      // We map through the list of products sent by the client to extract the _id of each item and create a new Order.
+
+      await Order.create({ items: args.items.map(({ _id }) => _id) });
+      const line_items = [];
+
+      for (const item of args.products) {
+        line_items.push({
+          price_data: {
             currency: 'usd',
-          });
-  
-          line_items.push({
-            price: price.id,
-            quantity: 1
-          });
-        }
+            item_data: {
+              name: item.name,
+              description: item.description,
+              images: [`${url}/images/${item.image}`],
+            },
+            unit_amount: item.price * 100,
+          },
+          quantity: item.purchaseQuantity,
+        });
+      }
+
   
         const session = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
