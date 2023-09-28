@@ -15,14 +15,15 @@ function Footer() {
 
         
         <footer className='Footer'>
-            {/* <Box sx={{
-                textAlign: 'center',
-                padding: '20px',
-                lineHeight: '60px',
-                backgroundColor: '#2e5136'
-            }}> */}
             <a href='#' className='footer-logo'>
             <img src={Freshlogo} alt="Fresh Fit Express Logo"/>
+            <div className='logo-text'>
+            <h2>
+            Fresh <br />
+            Fit <br />
+            Express
+            </h2>
+            </div>
             </a>
                  <div className='social-media-links'>
                 <a href='https://instagram.c om'><img src={instagramLogo} alt="Follow us on Instagram"/></a>
@@ -31,9 +32,8 @@ function Footer() {
                 </div>
 
            <div className='copyright'>
-               <p>&copy; Fresh Fit Express </p>
+               <p>&copy; Fresh Fit Express 2023</p>
            </div>
-           {/* </Box> */}
         </footer>
     );
 }
