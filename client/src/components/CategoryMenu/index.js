@@ -10,7 +10,7 @@ import { idbPromise } from '../../utils/helpers';
 import { Button } from "@material-ui/core";
 import useStyles from './styles';
 
-function CategoryMenu() {
+const  CategoryMenu=()=> {
     
     const [state, dispatch] = useStoreContext();
     const classes = useStyles();
@@ -18,7 +18,7 @@ function CategoryMenu() {
 
     const { categories } = state;
 
-    const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+    const { loading, data:categoryData } = useQuery(QUERY_CATEGORIES);
 
     useEffect(() => {
         if (categoryData) {
@@ -49,7 +49,7 @@ function CategoryMenu() {
         return (
             <div>
                 <h3 className= "mx-3">Choose an item</h3>
-                {categories.map((item) => (
+                {categories?.map((item) => (
                     <Button
                     className={classes.buttons}
                     variant="contained"
@@ -63,6 +63,7 @@ function CategoryMenu() {
                     </Button>
                 ))}
             </div>
+            // <div>TEST</div>
         )
     }
 
