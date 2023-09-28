@@ -11,11 +11,15 @@ const expiration = "1h";
 //function authMiddleware for routes allows token to be sent via req.query or headers
 module.exports = { 
     authMiddleware: function (req, res, next) {
-        let token = req.query.token || req.headers.authorization;
+        console.log( req);
+        let token = (req.query && req.query.token) || (req.headers && req.headers.authorization);
 
+        if(!token) {
+            return req;
+        }
         //Token bearer & token value
         if (req.headers.authorization) {
-            token = token.split('').pop().trim();
+            token = token.split(' ').pop().trim();
         }
         if(!token) {
             return res.status(400).json({message: "You have no token"});

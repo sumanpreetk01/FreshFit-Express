@@ -1,22 +1,82 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
-import ContactUs from './pages/Contact';
-import Nav from './components/Nav';
+
 import Home from './pages/Home';
-import Footer from './components/footer'
-// import Login from './pages/Login';
+import Nav from './components/Nav';
+import Footer from './components/footer';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Success from './pages/Success';
+import Detail from './pages/Detail';
+import Menu from './pages/Menu';
+import { StoreProvider } from './utils/GlobalState';
 
 
-function App(){
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+function App() {
   return (
-    <div>
-    <Nav />
-    <Home />
-    <ContactUs />
-    <Footer/>
-    </div>
-  )
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <StoreProvider>
+            <Nav />
+            <Routes>
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              <Route 
+              path="/menu" 
+              element={<Menu />} />
+              <Route 
+                path="/login" 
+                element={<Login />} 
+              />
+              <Route 
+                path="/signup" 
+                element={<Signup />} 
+              />
+              <Route 
+                path="/success" 
+                element={<Success />} 
+              />
+              <Route 
+              path="/item/:id" 
+              element={<Detail />} />
+              
+            </Routes>
+            <Footer />
+          </StoreProvider>
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
 }
-
 
 export default App;
