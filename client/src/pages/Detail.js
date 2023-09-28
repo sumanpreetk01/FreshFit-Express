@@ -12,7 +12,7 @@ import {
   ADD_TO_CART,
   UPDATE_ITEM,
 } from '../utils/actions';
-import { QUERY_PRODUCTS } from '../utils/queries';
+import { QUERY_ITEM } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
@@ -27,7 +27,7 @@ function Detail() {
 
   const [currentItem, setCurrentItem] = useState({});
 
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_ITEM);
 
   const { item, cart } = state;
 
@@ -80,7 +80,7 @@ function Detail() {
         type: ADD_TO_CART,
         product: { ...currentItem, purchaseQuantity: 1 },
       });
-      idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise('cart', 'put', { ...currentItem, purchaseQuantity: 1 });
     }
   };
 
