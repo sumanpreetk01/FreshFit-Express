@@ -10,7 +10,7 @@ import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
-  UPDATE_PRODUCTS,
+  UPDATE_ITEM,
 } from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
@@ -36,7 +36,7 @@ function Detail() {
     // already in global store
 
     if (item.length) {
-      setCurrentProduct(item.find((item) => item._id === id));
+      setCurrentItem(item.find((item) => item._id === id));
     }
 
     // retrieved from server
