@@ -10,13 +10,9 @@ function App(){
     <div>
     <Nav />
     <Home />
-
     <Footer />
   
    
-
-
-
     </div>
 
   )
