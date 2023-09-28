@@ -54,7 +54,7 @@ This app is covered under MIT license. For details and limitations of this licen
 This app has been possible with great work and contribution of the following colleagues:<br>
 - soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>-Schemas - (resolvers,typeDefs) ,Utils are done by Sonia
 -  rbala [GitHub - link](https://github.com/rbala16)<br>-Models/seeds/config/server.js,README file  are done by Rajni
-- sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Utils ( auth, helpers, mutations, queries, reducers ) are done  by    Suman<br>
+- sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Utils ( auth, helpers, mutations, queries, reducers ) ,productlist page are done  by    Suman<br>
 -  SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>-Pages (landing page, menu, contact page, checkout page) are done by Swathi,<br>
 
 
