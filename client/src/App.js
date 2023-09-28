@@ -9,7 +9,9 @@ function App(){
     <Nav />
     <Home />
     <ContactUs />
+
     </div>
+
   )
 }
 
