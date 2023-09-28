@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -13,6 +14,13 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Success from './pages/Success';
+import { StoreProvider } from './utils/GlobalState';
+
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -52,14 +60,6 @@ function App() {
               <Route 
                 path="/success" 
                 element={<Success />} 
-              />
-              <Route 
-                path="/orderHistory" 
-                element={<OrderHistory />} 
-              />
-              <Route 
-                path="/products/:id" 
-                element={<Detail />} 
               />
             </Routes>
             <Footer />
