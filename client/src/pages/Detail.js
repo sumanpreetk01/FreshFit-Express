@@ -23,7 +23,7 @@ function Detail() {
   const state = useSelector((state) => state);
   const { id } = useParams();
 
-// the useState hook is used to create a currentProduct state variable, which will hold the details of the currently selected product.
+// the useState hook is used to create a currentItem state variable, which will hold the details of the currently selected product.
 
   const [currentItem, setCurrentItem] = useState({});
 
