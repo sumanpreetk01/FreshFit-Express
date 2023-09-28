@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
 import Nav from './components/Nav';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Success from './pages/Success';
