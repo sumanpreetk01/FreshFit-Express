@@ -1,25 +1,35 @@
 import { gql } from "@apollo/client";
 
-export const GET_MENU_ITEMS = gql`
-  query GetMenuItems {
-    menuItems {
-      id
+export const QUERY_CATEGORIES = gql`
+  {
+    categories {
+      _id
       name
-      price
     }
   }
 `;
 
-export const GET_CART_ITEMS = gql`
-  query GetCartItems {
-    cartItems {
-      id
-      name
-      price
-      quantity
+export const QUERY_USER = gql`
+  {
+    user {
+      firstName
+      lastName
+      orders {
+        _id
+        purchaseDate
+        item {
+          _id
+          name
+          description
+          image
+          price
+          quantity
+        }
+      }
     }
   }
 `;
+
 
 export const GET_ORDER_HISTORY = gql`
   query GetOrderHistory {
@@ -27,11 +37,33 @@ export const GET_ORDER_HISTORY = gql`
       id
       date
       totalAmount
-      items {
+      item {
         id
         name
         price
         quantity
+      }
+    }
+  }
+`;
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [ProductInput]) {
+    checkout(products: $products) {
+      session
+    }
+  }
+`;
+
+export const QUERY_ALL_PRODUCTS = gql`
+  {
+    products {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
       }
     }
   }

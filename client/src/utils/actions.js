@@ -1,57 +1,11 @@
-import { useMutation, useQuery } from "@apollo/client";
-import {
-  ADD_TO_CART,
-  REMOVE_FROM_CART,
-  PLACE_ORDER,
-  GET_CART_ITEMS,
-  GET_ORDER_HISTORY,
-  GET_MENU_ITEMS,
-} from "./queries";
-import { calculateTotals, formatCurrency } from "./helpers";
+export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
 
-export const addToCartAction = (itemId) => {
-  const [addToCart] = useMutation(ADD_TO_CART);
+export const ADD_TO_CART = "ADD_TO_CART";
+export const ADD_MULTIPLE_TO_CART = "ADD_MULTIPLE_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const CLEAR_CART = "CLEAR_CART";
+export const UPDATE_CART_QUANTITY = "UPDATE_CART_QUANTITY";
+export const TOGGLE_CART = "TOGGLE_CART";
 
-  return addToCart({
-    variables: { itemId },
-    refetchQueries: [{ query: GET_CART_ITEMS }],
-  });
-};
-
-export const removeFromCartAction = (itemId) => {
-  const [removeFromCart] = useMutation(REMOVE_FROM_CART);
-
-  return removeFromCart({
-    variables: { itemId },
-    refetchQueries: [{ query: GET_CART_ITEMS }],
-  });
-};
-
-export const placeOrderAction = (orderInput) => {
-  const [placeOrder] = useMutation(PLACE_ORDER);
-
-  return placeOrder({
-    variables: { input: orderInput },
-    refetchQueries: [{ query: GET_ORDER_HISTORY }],
-  });
-};
-
-export const getMenuItems = () => {
-  return useQuery(GET_MENU_ITEMS);
-};
-
-export const getCartItems = () => {
-  return useQuery(GET_CART_ITEMS);
-};
-
-export const getOrderHistory = () => {
-  return useQuery(GET_ORDER_HISTORY);
-};
-
-export const formatCurrency = (amount) => {
-  return formatCurrency(amount);
-};
-
-export const calculateTotals = (items) => {
-  return calculateTotals(items);
-};
+export const UPDATE_CATEGORIES = "UPDATE_CATEGORIES";
+export const UPDATE_CURRENT_CATEGORY = "UPDATE_CURRENT_CATEGORY";
