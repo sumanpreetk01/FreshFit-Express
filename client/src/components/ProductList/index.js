@@ -20,7 +20,7 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         item: data.item,
       });
-      data.products.forEach((product) => {
+      data.items.forEach((item) => {
         idbPromise('items', 'put', item);
       });
     } else if (!loading) {

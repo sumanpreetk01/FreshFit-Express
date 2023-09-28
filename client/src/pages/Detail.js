@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@material-ui/core';
 
-import Cart from '../components/Cart';
+import Cart from '../components/cart/index.js';
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
