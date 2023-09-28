@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-import { Button, CssBaseline, TextField, FormControlLabel, Grid, Box, Typography, Container } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { Button, CssBaseline, TextField, FormControlLabel, Grid, Box, Typography, Container } from '@mui/material';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const defaultTheme = createTheme();
+// const defaultTheme = createTheme();
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });

@@ -3,28 +3,35 @@
     color: #d8e7db;
     padding: 20px;
     text-align: center;
-    line-height: 60px;
 }
 
 .footer-logo {
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.logo-text h2 {
+    margin: 0;
+    flex-direction: column;
 }
 
 .footer-logo img {
-    width: 150px;
+    width: 140px;
     height: auto;
 }
 
 .social-media-links {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-media-links img {
-    width: 30px;
+    width: 40px;
     height: auto;
-    padding: 5px;
+    padding: 10px;
 }
 
 .copyight {

@@ -61,6 +61,25 @@ export const GET_ORDER_HISTORY = gql`
     }
   }
 `;
+<<<<<<< HEAD
+
+export const QUERY_USER = gql`
+  {
+    user {
+      firstName
+      lastName
+      orders {
+        _id
+        purchaseDate
+        products {
+          _id
+          name
+          description
+          price
+          quantity
+          image
+        }
+=======
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ProductInput]) {
     checkout(products: $products) {
@@ -79,6 +98,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       quantity
       category {
         name
+>>>>>>> b65494d9cfddeaf53fcc40e8c8aede979a11c9f5
       }
     }
   }
