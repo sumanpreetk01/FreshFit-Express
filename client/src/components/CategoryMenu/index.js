@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY
-} from '../../utils/helpers';
+} from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
 import { Button } from "@material-ui/core";
 import useStyles from './styles';

@@ -15,6 +15,8 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Success from './pages/Success';
+import Detail from './pages/Detail';
+import Menu from './pages/Menu';
 import { StoreProvider } from './utils/GlobalState';
 
 
@@ -50,6 +52,9 @@ function App() {
                 element={<Home />} 
               />
               <Route 
+              path="/menu" 
+              element={<Menu />} />
+              <Route 
                 path="/login" 
                 element={<Login />} 
               />
@@ -61,6 +66,10 @@ function App() {
                 path="/success" 
                 element={<Success />} 
               />
+              <Route 
+              path="/item/:id" 
+              element={<Detail />} />
+              
             </Routes>
             <Footer />
           </StoreProvider>
