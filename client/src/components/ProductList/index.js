@@ -4,7 +4,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
+// import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 function ProductList() {
@@ -18,35 +18,35 @@ function ProductList() {
     if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
-        item: data.item,
+        items: data.items,
       });
       data.items.forEach((item) => {
-        idbPromise('items', 'put', item);
+        // idbPromise('items', 'put', item);
       });
     } else if (!loading) {
-      idbPromise('items', 'get').then((item) => {
-        dispatch({
-          type: UPDATE_PRODUCTS,
-          item: item,
-        });
-      });
+      // idbPromise('items', 'get').then((item) => {
+      //   dispatch({
+      //     type: UPDATE_PRODUCTS,
+      //     item: item,
+      //   });
+      // });
     }
   }, [data, loading, dispatch]);
 
   function filterProducts() {
     if (!currentCategory) {
-      return state.item;
+      return state.items;
     }
 
-    return state.item.filter(
+    return state.items.filter(
       (item) => item.category._id === currentCategory
     );
   }
 
   return (
     <div className="my-2">
-      <h2>Our Products:</h2>
-      {state.item.length ? (
+      <h2>Our Healthy Options:</h2>
+      {state.items.length ? (
         <div className="flex-row">
           {filterProducts().map((item) => (
             <ProductItem
@@ -60,7 +60,7 @@ function ProductList() {
           ))}
         </div>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <h3>You haven't added any items yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
