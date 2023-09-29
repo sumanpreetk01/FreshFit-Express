@@ -18,7 +18,7 @@ type Item {
     _id: ID!
     name: String!
     description: String!
-    image: String!
+    image: String
     quantity: Int
     price: Float
     category: Category

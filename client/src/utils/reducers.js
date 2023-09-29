@@ -16,20 +16,20 @@ export const reducer = (state, action) => {
     case UPDATE_PRODUCTS:
       return {
         ...state,
-        item: [...action.item],
+        items: [...action.items],
       };
 
     case ADD_TO_CART:
       return {
         ...state,
         cartOpen: true,
-        cart: [...state.cart, action.item],
+        // cart: [...state.cart, action.item],
       };
 
     case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
-        cart: [...state.cart, ...action.item],
+        // cart: [...state.cart, ...action.items],
       };
 
     case UPDATE_CART_QUANTITY:
