@@ -12,6 +12,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+.footer-logo :hover{
+   color: #a2df96; 
+   transition: color 0.3s ease;
 }
 
 .logo-text h2 {
@@ -36,6 +42,7 @@
     width: 40px;
     height: auto;
     padding: 10px;
+    filter: invert(90%);
 }
 
 .copyight {

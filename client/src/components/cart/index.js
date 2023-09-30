@@ -64,9 +64,9 @@ const Cart = () => {
 
       return (
         <div className='cart-container'>
-          <div className='close-button' onClick={toggleCart}>
+          <button className='close-button' onClick={toggleCart}>
             close
-          </div>
+          </button>
           <h2>Cart</h2>
           {state.cart.length ? (
             <div>
