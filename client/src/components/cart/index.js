@@ -8,6 +8,7 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
+import cartIcon from '../../assets/cart.png'
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -56,16 +57,14 @@ const Cart = () => {
       if (!state.cartOpen) {
         return (
           <div className="cart-closed" onClick={toggleCart}>
-            <span role="img" aria-label="trash">
-              🛒
-            </span>
+            <img className='cart-icon' src={cartIcon} alt='shopping cart'/>
           </div>
         );
       }
 
       return (
-        <div className="cart">
-          <div className="close" onClick={toggleCart}>
+        <div className='cart-container'>
+          <div className='close-button' onClick={toggleCart}>
             [close]
           </div>
           <h2>Shopping Cart</h2>
@@ -75,18 +74,18 @@ const Cart = () => {
                 <CartItem key={item._id} item={item} />
               ))}
     
-              <div className="flex-row space-between">
+              <div className='total-section'>
                 <strong>Total: ${calculateTotal()}</strong>
     
                 {Auth.loggedIn() ? (
-                  <button onClick={submitCheckout}>Checkout</button>
+                  <button className='checkout-button' onClick={submitCheckout}>Checkout</button>
                 ) : (
                   <span>(log in to check out)</span>
                 )}
               </div>
             </div>
           ) : (
-            <h3>
+            <h3 className='empty-cart-message'>
               There's nothing in your cart yet!
             </h3>
           )}

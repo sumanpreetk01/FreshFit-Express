@@ -16,12 +16,11 @@ function Footer() {
         
         <footer className='Footer'>
             <a href='#' className='footer-logo'>
-            <img src={Freshlogo} alt="Fresh Fit Express Logo"/>
+            <img src={Freshlogo} alt="FreshFit Express Logo"/>
             <div className='logo-text'>
             <h2>
-            Fresh <br />
-            Fit <br />
-            Express
+            FreshFit <br />
+            Express <br />
             </h2>
             </div>
             </a>
@@ -32,7 +31,7 @@ function Footer() {
                 </div>
 
            <div className='copyright'>
-               <p>&copy; Fresh Fit Express 2023</p>
+               <p>&copy; FreshFit Express 2023</p>
            </div>
         </footer>
     );
