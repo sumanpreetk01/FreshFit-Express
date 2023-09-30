@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-// import { Button, CssBaseline, TextField, FormControlLabel, Grid, Box, Typography, Container } from '@mui/material';
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-// const defaultTheme = createTheme();
+import './css/signup.css'
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -35,14 +32,17 @@ function Signup(props) {
   };
 
   return (
-    <div>
-      <Link to="/login">Already have an account? Login</Link>
+    <div className='signup-container'>
+      <Link className='login-link' to="/login">
+        Already have an account? Login
+      </Link>
 
       <h2>Sign Up</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className='signup-form' onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
+            className='input-field'
             placeholder="First"
             name="firstName"
             type="firstName"
@@ -53,6 +53,7 @@ function Signup(props) {
         <div>
           <label htmlFor="lastName">Last Name</label>
           <input
+            className='input-field'
             placeholder="Last"
             name="lastName"
             type="lastName"
@@ -63,6 +64,7 @@ function Signup(props) {
         <div>
           <label htmlFor="email">Email</label>
           <input
+            className='input-field'
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -73,7 +75,8 @@ function Signup(props) {
         <div>
           <label htmlFor="pwd">Password</label>
           <input
-            placeholder="Enter your password"
+            className='input-field'
+            placeholder="Enter a password"
             name="password"
             type="password"
             id="pwd"
@@ -81,7 +84,7 @@ function Signup(props) {
           />
         </div>
         <div>
-          <button type="submit">Sign Up</button>
+          <button className='submit-button' type="submit">Sign Up</button>
         </div>
       </form>
     </div>

@@ -57,7 +57,7 @@ function Nav() {
             //  marginRight: '10px' 
             //     }}
             />
-             <h1>Fresh Fit Express </h1>
+             <h1>FreshFit Express </h1>
           </Link>
        
   

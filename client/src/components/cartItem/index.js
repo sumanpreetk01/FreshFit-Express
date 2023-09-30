@@ -1,7 +1,9 @@
 import React from 'react';
-import { useStoreContext } from "../../utils/GlobalState";
-import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
-import { idbPromise } from "../../utils/helpers";
+import { useStoreContext } from '../../utils/GlobalState';
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
+import { idbPromise } from '../../utils/helpers';
+import trashIcon from '../../assets/trash.png'
+import './style.css'
 
 const CartItem = ({ item }) => {
 
@@ -37,30 +39,37 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
-      <div>
+    <div className="cart-item-card">
+      <div className='cart-item-image'>
         <img
           src={`/images/${item.image}`}
-          alt=""
+          alt={item.name}
         />
       </div>
       <div>
-        <div>{item.name}, ${item.price}</div>
-        <div>
+        <div className='cart-item-info'>
+          <h5>{item.name}</h5> 
+          <h6>{item.price}</h6>
+        </div>
+        <div className='card-actions'>
           <span>Qty:</span>
+        <div className="card-buttons">
+          <button type="button" onClick={() => onChange({ target: { value: item.purchaseQuantity - 1 } })}>-</button>
           <input
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
             onChange={onChange}
           />
-          <span
-            role="img"
-            aria-label="trash"
+          <button type="button" onClick={() => onChange({ target: { value: item.purchaseQuantity + 1 } })}>+</button>
+           <img
+           className='trash-icon'
+            src={trashIcon}
+            alt="Trash"
+            style={{ cursor: 'pointer' }}
             onClick={() => removeFromCart(item)}
-          >
-            🗑️
-          </span>
+          />
+          </div>
         </div>
       </div>
     </div>

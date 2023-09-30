@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './css/login.css'
 // import { Button, TextField, Box, Typography, Container, Grid } from '@mui/material';
 
 
@@ -32,14 +33,17 @@ function Login(props) {
   };
 
   return (
-    <div>
-      <Link to="/signup">Don't have an account yet? Signup</Link>
+    <div className='login-container'>
+      <Link to="/signup" className='signup-link'>
+        Don't have an account yet? Sign up
+      </Link>
 
       <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className='login-form' onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor='email'>Email</label>
           <input
+          className='input-field'
           placeholder='Email Address'
           name='email'
           type='email'
@@ -50,6 +54,7 @@ function Login(props) {
         <div>
           <label htmlFor='pwd'>Password</label>
           <input
+          className='input-field'
           placeholder='Enter your password'
           name='password'
           type='password'
@@ -64,7 +69,9 @@ function Login(props) {
             </div>
           ): null}
           <div>
-            <button type='submit'>Login</button>
+            <button className='submit-button' type='submit'>
+              Login
+            </button>
           </div>
         </div>
       </form>
