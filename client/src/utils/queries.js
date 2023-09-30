@@ -9,7 +9,7 @@ query categories {
 }
 `;
 export const QUERY_PRODUCTS = gql`
-query getProducts($category: ID) {
+query items($category: ID) {
   items(category: $category) {
     _id
     name
@@ -63,11 +63,11 @@ export const GET_ORDER_HISTORY = gql`
   }
 `;
 export const QUERY_CHECKOUT = gql`
-  query getCheckout($item: [ItemInput]) {
-    checkout(item: $item) {
-      session
-    }
+query GetCheckoutItem($items: [ID]!) {
+  checkout(items: $items) {
+    session
   }
+}
 `;
 
 export const QUERY_ALL_PRODUCTS = gql`

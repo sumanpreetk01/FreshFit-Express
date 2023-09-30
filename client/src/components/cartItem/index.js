@@ -7,7 +7,7 @@ import './style.css'
 
 const CartItem = ({ item }) => {
 
-  const [, dispatch] = useStoreContext();
+  const [ dispatch] = useStoreContext();
 
   const removeFromCart = item => {
     dispatch({
