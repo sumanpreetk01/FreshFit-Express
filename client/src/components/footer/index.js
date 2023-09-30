@@ -15,7 +15,7 @@ function Footer() {
 
         
         <footer className='Footer'>
-            <a href='#' className='footer-logo'>
+            <a href='/' className='footer-logo'>
             <img src={Freshlogo} alt="FreshFit Express Logo"/>
             <div className='logo-text'>
             <h2>

@@ -26,15 +26,17 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #fff;
 }
 
 .nav-links {
-    margin-right: 20px;
+    margin-right: 40px;
     list-style: none;
     padding: 10px;
+    display: flex;
 }
 
-a {
+.nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -42,6 +44,17 @@ a {
     transition: color 0.3s ease;
 }
 
+.nav-bar a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
 a:hover {
     color: #a2df96;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a :hover {
+    color: #a2df96;
+    transition: color 0.3s ease;
 }

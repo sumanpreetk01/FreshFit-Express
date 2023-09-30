@@ -17,9 +17,9 @@ function Nav() {
                 <li className="nav-links">
                     <Link to="/orderHistory">Order History</Link>
                 </li>
-                <li className="nav-links">
+                {/* <li className="nav-links">
                     <Link to="/cart">Cart</Link>
-                </li>
+                </li> */}
                 <li className="nav-links">
                     <Link to="/contact">Contact Us</Link>
                 </li>
