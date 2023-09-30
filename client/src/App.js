@@ -8,7 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-
+import OrderHistory from './pages/OrderHistory';
 import Home from './pages/Home';
 import Nav from './components/Nav';
 import Footer from './components/footer';
@@ -61,6 +61,9 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
+               <Route 
+              path="/orderHistory" 
+              element={<OrderHistory />} />
               <Route 
                 path="/success" 
                 element={<Success />} 

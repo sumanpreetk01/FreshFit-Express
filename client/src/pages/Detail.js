@@ -41,20 +41,20 @@ function Detail() {
     else if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
-        item: data.item,
+        items: data.items,
       });
 
       data.item.forEach((item) => {
-        idbPromise("items", "put", item);
+        idbPromise("item", "put", item);
       });
     }
 
     // get cache from idb
     else if (!loading) {
-      idbPromise("items", "get").then((indexedItem) => {
+      idbPromise("items", "get").then((indexedItems) => {
         dispatch({
           type: UPDATE_PRODUCTS,
-          item: indexedItem,
+          items: indexedItems,
         });
       });
     }
@@ -75,7 +75,7 @@ function Detail() {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...currentItem, purchaseQuantity: 1 },
+        item: { ...currentItem, purchaseQuantity: 1 },
       });
       idbPromise("cart", "put", { ...currentItem, purchaseQuantity: 1 });
     }

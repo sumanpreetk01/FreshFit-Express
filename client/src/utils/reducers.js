@@ -23,13 +23,13 @@ export const reducer = (state, action) => {
       return {
         ...state,
         cartOpen: true,
-        // cart: [...state.cart, action.item],
+        cart: [...state.cart, action.item],
       };
 
     case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
-        // cart: [...state.cart, ...action.items],
+        cart: [...state.cart, ...action.items],
       };
 
     case UPDATE_CART_QUANTITY:
