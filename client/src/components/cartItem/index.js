@@ -21,23 +21,31 @@ const CartItem = ({ item }) => {
 
   const onChange = (e) => {
     const value = e.target.value;
-    if (value === '0') {
-      dispatch({
-        type: REMOVE_FROM_CART,
-        _id: item._id
-      });
-      idbPromise('cart', 'delete', { ...item });
-
-    } else {
+  
+    if (value === "") {
       dispatch({
         type: UPDATE_CART_QUANTITY,
         _id: item._id,
-        purchaseQuantity: parseInt(value)
+        purchaseQuantity: "",
       });
-      idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
-
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: "" });
+    } else if (value === "0" || value === 0) {
+      dispatch({
+        type: REMOVE_FROM_CART,
+        _id: item._id,
+      });
+      idbPromise('cart', 'delete', { ...item });
+    } else {
+      const newValue = parseInt(value);
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: item._id,
+        purchaseQuantity: isNaN(newValue) ? "" : newValue,
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: isNaN(newValue) ? "" : newValue });
     }
-  }
+  };
+  
 
   return (
     <div className="cart-item-card">
@@ -57,8 +65,11 @@ const CartItem = ({ item }) => {
         <div className="card-buttons">
           <button type="button" onClick={() => onChange({ target: { value: item.purchaseQuantity - 1 } })}>-</button>
           <input
-            type="number"
+            type="text"
+            inputMode='numeric'
+            pattern='[0-9]*'
             placeholder="1"
+            className='number-input'
             value={item.purchaseQuantity}
             onChange={onChange}
           />
