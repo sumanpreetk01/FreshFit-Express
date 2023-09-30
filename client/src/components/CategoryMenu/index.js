@@ -1,42 +1,50 @@
 import React, { useEffect } from "react";
 import { useQuery } from '@apollo/client';
-import { useDispatch, useSelector } from 'react-redux';
+import { useStoreContext } from '../../utils/GlobalState';
+// import { useDispatch, useSelector } from 'react-redux';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY
 } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
 import { Button } from "@material-ui/core";
-import useStyles from './styles';
+// import useStyles from './styles';
 
-function CategoryMenu() {
+const  CategoryMenu=()=> {
     
-    const dispatch = useDispatch();
-    const classes = useStyles();
-    const state = useSelector((state) => state);
+    const [state, dispatch] = useStoreContext();
+    // const classes = useStyles();
+    
 
     const { categories } = state;
-
-    const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
-
-    useEffect(() => {
-        if (categoryData) {
+    console.log(categories)
+    const { loading, data} = useQuery(QUERY_CATEGORIES);
+    
+    const categoryMenu = ()=>{
+        console.log(data)
+        if (data) {
+    
             dispatch({
                 type: UPDATE_CATEGORIES,
-                categories: categoryData.categories,
+                categories: data.categories,
             });
-            categoryData.categories.forEach((category) => {
+            data.categories.forEach((category) => {
                 idbPromise('categories', 'put', category);
             });
             } else if (!loading) {
                 idbPromise('categories', 'get').then((categories) => {
-                    dispatch({
-                        type: UPDATE_CATEGORIES,
-                        categories: categories,
-                    });
+                    // dispatch({
+                    //     type: UPDATE_CATEGORIES,
+                    //     categories: categories,
+                    // });
                 });
             }
-        }, [categoryData, loading, dispatch]);
+    }
+    useEffect(() => {
+        categoryMenu();
+    }, [data, dispatch]);
+
+    // categoryMenu();
 
         const handleClick = (id) => {
             dispatch({
@@ -48,10 +56,8 @@ function CategoryMenu() {
         return (
             <div>
                 <h3 className= "mx-3">Choose an item</h3>
-                {categories.map((item) => (
-                    <Button
-                    className={classes.buttons}
-                    variant="contained"
+                {categories?.map((item) => (
+                    <button
                      
                     key={item._id}
                     onClick={() => {
@@ -59,9 +65,10 @@ function CategoryMenu() {
                     }}
                     >
                         {item.name}
-                    </Button>
+                    </button>
                 ))}
             </div>
+            // <div>TEST</div>
         )
     }
 

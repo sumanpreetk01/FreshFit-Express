@@ -21,7 +21,6 @@ import { StoreProvider } from './utils/GlobalState';
 
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -35,7 +34,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  uri: '/graphql',
   cache: new InMemoryCache(),
 });
 
