@@ -116,7 +116,8 @@ function Detail() {
             </Button>
           </p>
 
-          <img src={`/images/${currentItem.image}`} alt={currentItem.name} />
+          <img src={`/images/${currentItem.image}`} 
+             alt={currentItem.name} />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
