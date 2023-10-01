@@ -48,11 +48,11 @@ function ProductItem(item) {
     <Card className={classes.root}>
       <Link to={`/items/${_id}`}>
       <CardMedia className={classes.media} image={`/images/${image}`} title={name} />
-        {/* <img
+        <img
           alt={name}
           src={`/images/${image}`}
-        /> */}
-        {/* <p>{name}</p> */}
+        /> 
+         <p>{name}</p>
       </Link>
       
       <CardContent className='media'>
@@ -64,14 +64,14 @@ function ProductItem(item) {
         style={{ marginRight: '25px' }}>
           ${price}
         </Typography>
-        {/* <Typography gutterBottom variant="h5" component="h2">
+        <Typography gutterBottom variant="h5" component="h2">
           {quantity}{pluralize(" item", quantity)} in stock
-        </Typography> */}
+        </Typography>
       </div>
     </CardContent>
       <div>
-        {/* <div>{quantity} {pluralize("item", quantity)} in stock</div> */}
-        {/* <span>${price}</span> */}
+        <div>{quantity} {pluralize("item", quantity)} in stock</div> 
+         <span>${price}</span>
       </div>
 
       <button className="cart-button" onClick={addToCart}>Add to cart</button>
