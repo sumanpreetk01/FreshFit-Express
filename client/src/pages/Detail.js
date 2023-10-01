@@ -55,7 +55,7 @@ function Detail() {
       idbPromise("items", "get").then((indexedItems) => {
         dispatch({
           type: UPDATE_PRODUCTS,
-          products: indexedItems,
+          items: indexedItems,
         });
       });
     }
