@@ -108,7 +108,7 @@ db.once('open', async () => {
     name: "Blueberry and oats granola bar",
    description:
       "Granola bars are made from ingredients like oats, dried fruit, nuts, seeds, honey, coconut, and Blueberry",
-    image: "granola bar.jfif",
+    image: "granola-bar.jpeg",
     price: 2.99,
     quantity: 1,
     category: categories[0]._id
@@ -252,9 +252,9 @@ db.once('open', async () => {
   },
   {
     name: "Spicy Shrimp Spinach Caesar Salad",
-   description:
-      "shrimps.webp",
-    image: "The protein in this salad comes from crispy baked shrimp, a luxurious Caesar dressing egg yolk and anchovy paste, and a sprinkle of Parmesan cheese for good measure. ",
+    description: "The protein in this salad comes from crispy baked shrimp, a luxurious Caesar dressing egg yolk and anchovy paste, and a sprinkle of Parmesan cheese for good measure. ",
+    image:
+    "shrimps-salad.jpeg",
     price: 12.99,
     quantity: 1,
     category: categories[2]._id
