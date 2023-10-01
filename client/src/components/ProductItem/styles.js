@@ -8,6 +8,7 @@ export default makeStyles(() => ({
     height: "auto;",
     margin: "10px",
     marginBottom: "30px",
+    position: 'relative'
     
   },
   media: {
@@ -18,6 +19,8 @@ export default makeStyles(() => ({
   cardContent: {
     display: 'flex',
     justifyContent: 'space-between',
+    flexDirection: "column",
+    alignItems: 'center'
   },
   // cardContainer: {
   //   display: 'flex',

@@ -4,8 +4,10 @@
     padding: 20px;
     text-align: center;
     position: relative;
-    margin-top: auto;
+    margin-top: 200px;
     width: 100%;
+    z-index: -20;
+    margin-bottom: 0;
 }
 
 .footer-logo {

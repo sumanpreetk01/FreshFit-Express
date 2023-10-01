@@ -7,7 +7,13 @@
 }
 
 .cart-item-image {
-    width: 100px;
+    min-width: 80px;
+    max-width: 150px;
+    height: auto;
+}
+
+.cart-item-image img {
+    width: 100%;
     height: auto;
 }
 
@@ -23,6 +29,7 @@
 
 .card-actions span {
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .card-buttons button {
