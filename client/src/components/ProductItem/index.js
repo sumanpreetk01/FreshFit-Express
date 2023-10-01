@@ -4,6 +4,9 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import useStyles from './styles';
+import './cards.css';
+import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -17,6 +20,7 @@ function ProductItem(item) {
   } = item;
 
   const { cart } = state
+  const classes = useStyles();
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
@@ -40,20 +44,39 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1">
+   
+    <Card className={classes.root}>
       <Link to={`/items/${_id}`}>
-        <img
+      <CardMedia className={classes.media} image={`/images/${image}`} title={name} />
+        {/* <img
           alt={name}
           src={`/images/${image}`}
-        />
-        <p>{name}</p>
+        /> */}
+        {/* <p>{name}</p> */}
       </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
+      
+      <CardContent className='media'>
+      <div className={classes.cardContent}>
+        <Typography gutterBottom variant="h5" component="h2">
+          {name}
+        </Typography>
+        <Typography gutterBottom variant="h5" component="h2"
+        style={{ marginRight: '25px' }}>
+          ${price}
+        </Typography>
+        {/* <Typography gutterBottom variant="h5" component="h2">
+          {quantity}{pluralize(" item", quantity)} in stock
+        </Typography> */}
       </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+    </CardContent>
+      <div>
+        {/* <div>{quantity} {pluralize("item", quantity)} in stock</div> */}
+        {/* <span>${price}</span> */}
+      </div>
+
+      <button className="cart-button" onClick={addToCart}>Add to cart</button>
+    </Card>
+   
   );
 }
 

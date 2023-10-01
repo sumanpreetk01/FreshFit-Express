@@ -7,8 +7,8 @@ import { UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY
 } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
-import { Button } from "@material-ui/core";
-// import useStyles from './styles';
+// import { Button } from "@material-ui/core";
+import './categorystyle.css';
 
 const  CategoryMenu=()=> {
     
@@ -55,9 +55,11 @@ const  CategoryMenu=()=> {
 
         return (
             <div>
-                <h3 className= "mx-3">Choose an item</h3>
+                <h3 className= "menu-title">Choose a category</h3>
+               
                 {categories?.map((item) => (
-                    <button
+                  
+                    <button className="Category-menu-button"
                      
                     key={item._id}
                     onClick={() => {
@@ -67,6 +69,7 @@ const  CategoryMenu=()=> {
                         {item.name}
                     </button>
                 ))}
+                
             </div>
             // <div>TEST</div>
         )
