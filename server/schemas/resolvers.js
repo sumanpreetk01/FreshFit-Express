@@ -60,7 +60,7 @@ const resolvers = {
       await Order.create({ items: args.items.map(({ _id }) => _id) });
       const line_items = [];
 
-      for (const item of args.products) {
+      for (const item of args.items) {
         line_items.push({
           price_data: {
             currency: 'usd',
