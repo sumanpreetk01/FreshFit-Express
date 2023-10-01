@@ -52,7 +52,7 @@ export const ADD_USER = gql`
       email: $email
       password: $password
     ) {
-      session
+      token
       user {
         _id
       }
