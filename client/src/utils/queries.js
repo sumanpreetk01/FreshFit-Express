@@ -63,7 +63,7 @@ export const GET_ORDER_HISTORY = gql`
   }
 `;
 export const QUERY_CHECKOUT = gql`
-query GetCheckoutItem($items: [ID]!) {
+query getCheckout($items: [ID]!) {
   checkout(items: $items) {
     session
   }
