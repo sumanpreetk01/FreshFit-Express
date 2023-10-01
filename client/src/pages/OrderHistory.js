@@ -28,7 +28,7 @@ function OrderHistory() {
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
                 <div className="flex-row">
-                  {order.item.map(({ _id, image, name, price }, index) => (
+                  {order.items.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="card px-1 py-1">
                       <Link to={`/menu/${_id}`}>
                         <img alt={name} src={`/images/${image}`} />
