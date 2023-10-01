@@ -69,7 +69,7 @@ function App() {
                 element={<Success />} 
               />
               <Route 
-              path="/item/:id" 
+              path="/items/:id" 
               element={<Detail />} />
                <Route 
               path="/contact" 
