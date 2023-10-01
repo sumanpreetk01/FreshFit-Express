@@ -46,11 +46,25 @@ const Cart = () => {
         return sum.toFixed(2);
       }
 
+      // function submitCheckout() {
+      //   console.log(...state.cart)
+      //   getCheckout({
+      //     variables: { 
+      //       items: [...state.cart],
+      //     },
+      //   });
+      // }
       function submitCheckout() {
+        const itemIds = [];
+    
+        state.cart.forEach((item) => {
+          for (let i = 0; i < item.purchaseQuantity; i++) {
+            itemIds.push(item._id);
+          }
+        });
+    console.log(itemIds);
         getCheckout({
-          variables: { 
-            items: [...state.cart],
-          },
+          variables: { items: itemIds },
         });
       }
 
