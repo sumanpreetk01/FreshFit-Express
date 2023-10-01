@@ -7,11 +7,11 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import Contact from './pages/Contact';
 import OrderHistory from './pages/OrderHistory';
 import Home from './pages/Home';
 import Nav from './components/Nav';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Success from './pages/Success';
@@ -71,6 +71,9 @@ function App() {
               <Route 
               path="/item/:id" 
               element={<Detail />} />
+               <Route 
+              path="/contactUs" 
+              element={<Contact />} />
               
             </Routes>
             <Footer />
