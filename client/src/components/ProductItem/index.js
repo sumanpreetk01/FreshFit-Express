@@ -51,13 +51,13 @@ function ProductItem(item) {
 
       </Link>
       
-      <CardContent className='media'>
+      <CardContent className='media'style={{ width: '200px', height:'200px'}}>
       <div className={classes.cardContent}>
-        <Typography gutterBottom variant="h5" component="h2">
+        <Typography gutterBottom variant="h5" component="h2"style={{textAlign: 'center'}}>
           {name}
         </Typography>
         <Typography gutterBottom variant="h5" component="h2"
-        style={{ marginLeft: '30px' }}>
+        style={{ marginLeft: '30px', display: 'flex', flexDirection: "colunmn" }}>
           ${price}
         </Typography>
 

@@ -92,37 +92,43 @@ function Detail() {
   };
 
   return (
-    <>
+    <div>
       {currentItem && cart ? (
-        <div className="container my-1">
-          <Link to="/menu">← Back to Menu</Link>
+        <div  style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px"}}>
+          <Link to="/menu" style={{ marginBottom: "10px", textDecoration: "none" }}>
+            ← Back to Menu
+          </Link>
 
-          <h2 className="header-title">{currentItem.name}</h2>
+          <h2 className="header-title" style={{ fontSize: "24px", margin: "20px 0" }}>{currentItem.name}</h2>
 
-          <p>{currentItem.description}</p>
+          <img src={`/images/${currentItem.image}`} 
+             alt={currentItem.name} 
+             style={{ width: "500px", height: "auto", margin: "10px" }}/>
 
-          <p>
-            <strong>Price:</strong>${currentItem.price}{" "}
-            <Button color="primary" variant="contained" onClick={addToCart}>
+          <p style={{ margin: "10px", paddingBottom: "20px" }}>{currentItem.description}</p>
+
+          <div style={{ display: "flex", justifyContent: "center",  alignItems: "center",}}>
+            <strong style={{ marginRight: "10px" }}>Price:</strong><p style={{ marginRight: "10px" }}>${currentItem.price}{" "}</p>
+            <Button style={{ backgroundColor: "#2e5136", color: "#fff", marginRight: "5px" }} variant="contained" onClick={addToCart}>
               Add to Cart
             </Button>
             <Button
-              color="primary"
+              style={{ backgroundColor: "#2e5136", color: "#fff", marginLeft: "5px" }}
               variant="contained"
               disabled={!cart.find((p) => p._id === currentItem._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
             </Button>
-          </p>
+          </div>
 
-          <img src={`/images/${currentItem.image}`} 
-             alt={currentItem.name} />
+          {/* <img src={`/images/${currentItem.image}`} 
+             alt={currentItem.name} /> */}
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
-    </>
+    </div>
   );
 }
 
