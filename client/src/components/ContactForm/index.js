@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../../pages/css/contact.css'
 const ContactForm = () => {
     //use react hook useState
     const [contactFormStatus, setContactFormStatus] = React.useState('Send')
@@ -21,28 +21,28 @@ const ContactForm = () => {
     }
 
     return (
-        <div className="container mt-8">
-          <h2 className="mb-5">Questions? Drop us a message!</h2>
-          <form onSubmit={onSubmit}>
+        <div className="contact-title">
+          <h2>Questions? Drop us a message!</h2>
+          <form className="contact-form" onSubmit={onSubmit}>
             <div className="mb-5">
               <label className="form-label" htmlFor="name">
                 Name
               </label>
-              <input className="form-control" type="text" id="name" required />
+              <input className="contact-input" type="text" id="name" required />
             </div>
             <div className="mb-5">
               <label className="form-label" htmlFor="email">
                 Email
               </label>
-              <input className="form-control" type="email" id="email" required />
+              <input className="contact-input" type="email" id="email" required />
             </div>
             <div className="mb-5">
               <label className="form-label" htmlFor="message">
                 Message
               </label>
-              <textarea className="form-control" id="message" required />
+              <textarea className="contact-input" id="message" required />
             </div>
-            <button className="btn btn-danger" type="submit">
+            <button className="send-button" type="submit">
               {contactFormStatus}
             </button>
           </form>
