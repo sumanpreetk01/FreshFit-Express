@@ -22,10 +22,10 @@ export const PLACE_ORDER = gql`
 `;
 
 export const ADD_ORDER = gql`
-  mutation addOrder($products: [ID]!) {
-    addOrder(products: $products) {
+  mutation addOrder($s: [ID]!) {
+    addOrder(items: $items) {
       purchaseDate
-      item {
+      items {
         _id
         name
         description
