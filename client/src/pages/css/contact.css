@@ -1,0 +1,39 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+
+.contact-title{
+    margin-top: 10px;
+    color: #2e5136;
+}
+h2 {
+    color: #2e5136;
+  }
+.contact-form{
+    width: 300px;
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #d8e7db;
+    border-radius: 10px;
+}
+.contact-input{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-style: hidden;
+}
+.send-button{
+    width: 100%;
+    padding: 10px;
+    background-color: #2e5136;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
