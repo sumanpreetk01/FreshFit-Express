@@ -21,6 +21,7 @@ import { StoreProvider } from './utils/GlobalState';
 
 
 const httpLink = createHttpLink({
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -34,10 +35,9 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -69,7 +69,7 @@ function App() {
                 element={<Success />} 
               />
               <Route 
-              path="/item/:id" 
+              path="/items/:id" 
               element={<Detail />} />
                <Route 
               path="/contact" 

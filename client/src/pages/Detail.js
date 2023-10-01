@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../index.css";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { useDispatch, useSelector } from "react-redux";
+
 import { Button } from "@material-ui/core";
 
 import Cart from "../components/cart/index.js";
+import { useStoreContext } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -18,8 +19,8 @@ import spinner from "../assets/spinner.gif";
 
 function Detail() {
   //set up Redux functionality
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+
+  const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
   // the useState hook is used to create a currentItem state variable, which will hold the details of the currently selected product.
@@ -28,13 +29,13 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-  const { item, cart } = state;
+  const { items, cart } = state;
 
   useEffect(() => {
     // already in global store
 
-    if (item.length) {
-      setCurrentItem(item.find((item) => item._id === id));
+    if (items.length) {
+      setCurrentItem(items.find((item) => item._id === id));
     }
 
     // retrieved from server
@@ -44,8 +45,8 @@ function Detail() {
         items: data.items,
       });
 
-      data.item.forEach((item) => {
-        idbPromise("item", "put", item);
+      data.items.forEach((item) => {
+        idbPromise("items", "put", item);
       });
     }
 
@@ -58,7 +59,7 @@ function Detail() {
         });
       });
     }
-  }, [item, data, loading, dispatch, id]);
+  }, [items, data, loading, dispatch, id]);
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
@@ -115,7 +116,8 @@ function Detail() {
             </Button>
           </p>
 
-          <img src={`/images/${currentItem.image}`} alt={currentItem.name} />
+          <img src={`/images/${currentItem.image}`} 
+             alt={currentItem.name} />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
