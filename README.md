@@ -80,5 +80,3 @@ You are required to submit BOTH of the following for review:
 https://github.com/sumanpreetk01/FreshFit-Express<br>
 
 
-### Authors Notes: 
-  _This README and accompanying repo have been brought to you by:_<br>© Rajni bala,Sonia Sebastian,Sumanpreet Kaur,Swathi Vinod - 2023 CodeCamp Student<br>Confidential and Proprietary. All Rights Reserved.
