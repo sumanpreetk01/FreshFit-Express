@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
-import { ADD_USER } from '../utils/mutations';
-import './css/signup.css'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+import { ADD_USER } from "../utils/mutations";
+import "./css/signup.css";
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -17,6 +17,7 @@ function Signup(props) {
         password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        address: formState.address,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -32,17 +33,17 @@ function Signup(props) {
   };
 
   return (
-    <div className='signup-container'>
-      <Link className='login-link' to="/login">
+    <div className="signup-container">
+      <Link className="login-link" to="/login">
         Already have an account? Login
       </Link>
 
       <h2>Sign Up</h2>
-      <form className='signup-form' onSubmit={handleFormSubmit}>
+      <form className="signup-form" onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
-            className='input-field'
+            className="input-field"
             placeholder="First"
             name="firstName"
             type="firstName"
@@ -53,7 +54,7 @@ function Signup(props) {
         <div>
           <label htmlFor="lastName">Last Name</label>
           <input
-            className='input-field'
+            className="input-field"
             placeholder="Last"
             name="lastName"
             type="lastName"
@@ -62,9 +63,21 @@ function Signup(props) {
           />
         </div>
         <div>
+          <label htmlFor="address">Address</label>
+          <input
+            className="input-field"
+            placeholder="123 Main St"
+            name="address"
+            type="text"
+            id="address"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
           <label htmlFor="email">Email</label>
           <input
-            className='input-field'
+            className="input-field"
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -75,7 +88,7 @@ function Signup(props) {
         <div>
           <label htmlFor="pwd">Password</label>
           <input
-            className='input-field'
+            className="input-field"
             placeholder="Enter a password"
             name="password"
             type="password"
@@ -84,7 +97,9 @@ function Signup(props) {
           />
         </div>
         <div>
-          <button className='submit-button' type="submit">Sign Up</button>
+          <button className="submit-button" type="submit">
+            Sign Up
+          </button>
         </div>
       </form>
     </div>
