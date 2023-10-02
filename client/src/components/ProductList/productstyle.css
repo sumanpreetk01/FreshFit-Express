@@ -9,8 +9,9 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    flex: 0 0 calc(33.333% - 10px);
-    padding: 10px;
+    padding: 0;
+    margin-bottom: 100px;
+    z-index: 4;
 }
 
 .product-item img {
@@ -18,16 +19,4 @@
     height: auto;
   }
 
-@media (min-width: 768px) {
-    .product-item {
-        flex: 0 0 calc(33.333% - 50px);
-        margin: 0 10px 20px 0;
-    }
-}
 
-@media (max-width: 767px) {
-    .product-item {
-        width: 100%;
-        margin: 0 0 20px 0;
-    }
-}

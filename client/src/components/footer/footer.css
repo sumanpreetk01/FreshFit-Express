@@ -3,10 +3,19 @@
     color: #d8e7db;
     padding: 20px;
     text-align: center;
+<<<<<<< HEAD
     position: relative;
    
     width: 100%;
  
+=======
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    flex-direction: column;
+    height: auto;
+    bottom: 0;
+>>>>>>> 63ca757977349fc5c060cecd8d89e54d5c6b382b
 }
 
 .footer-logo {

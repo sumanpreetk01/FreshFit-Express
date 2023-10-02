@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+// import { pluralize } from "../../utils/helpers"
+>>>>>>> 63ca757977349fc5c060cecd8d89e54d5c6b382b
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
@@ -16,7 +20,11 @@ function ProductItem(item) {
     name,
     _id,
     price,
+<<<<<<< HEAD
    
+=======
+    // quantity
+>>>>>>> 63ca757977349fc5c060cecd8d89e54d5c6b382b
   } = item;
 
   const { cart } = state
@@ -57,7 +65,11 @@ function ProductItem(item) {
           {name}
         </Typography>
         <Typography gutterBottom variant="h5" component="h2"
+<<<<<<< HEAD
         style={{ marginLeft: '30px', display: 'flex', flexDirection: "colunmn" ,color:'grey' }}>
+=======
+        style={{ marginLeft: '30px', display: 'flex', flexDirection: "column" }}>
+>>>>>>> 63ca757977349fc5c060cecd8d89e54d5c6b382b
           ${price}
         </Typography>
 

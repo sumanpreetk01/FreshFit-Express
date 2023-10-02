@@ -5,10 +5,11 @@ export default makeStyles(() => ({
    
     minWidth: '250px',
     maxWidth: '30%',
-    height: "auto;",
+    height: "auto",
     margin: "10px",
     marginBottom: "30px",
-    position: 'relative'
+    position: 'relative',
+    zIndex: '4'
   },
   
   media: {
