@@ -52,14 +52,19 @@ This app is covered under MIT license. For details and limitations of this licen
 
 ## Contributing
 This app has been possible with great work and contribution of the following colleagues:<br>
-- soniasebastian [GitHub - link](https://github.com/soniasebastian)<br>-Schemas - (resolvers,typeDefs) ,Utils are done by Sonia
--  rbala [GitHub - link](https://github.com/rbala16)<br>-Models/seeds/config/server.js,README file  are done by Rajni
-- sumanpreetk01 [GitHub - link](https://github.com/sumanpreetk01)<br>-Utils ( auth, helpers, mutations, queries, reducers ) ,productlist page are done  by    Suman<br>
--  SwathiVinod19 [GitHub - link](https://github.com/SwathiVinod19)<br>-Pages (landing page, menu, contact page, checkout page) are done by Swathi,<br>
+-   Sonia Sebastian [GitHub - link](https://github.com/soniasebastian)<br>-Schemas - (resolvers,typeDefs) ,Utils are done by Sonia
+-  Rajni bala [GitHub - link](https://github.com/rbala16)<br>-Models/seeds/config/server.js,
+- Suman Preet [GitHub - link](https://github.com/sumanpreetk01)<br>-Utils ( auth, helpers, mutations, queries, reducers )  by    Suman<br>
+-  Swathi Vinod [GitHub - link](https://github.com/SwathiVinod19)<br>-Pages (landing page, menu, contact page, checkout page) are done by Swathi,<br>
+-  Abigail Cinco [GitHub - link](https://github.com/abi-gail17)<br>Components (navbar, cart, footer/page-login & sign up page, logo) are done by 
 
 
 ## Mockup
-The following animation demonstrates the application functionality:
+The following screenshoot demonstrates the application functionality:
+[demo1](./demo1.png)
+[demo1](./demo2.png)
+[demo1](./demo3.png)
+[demo1](./demo4.png)
 
 ## Questions
 If you have any questions, you can email us .<br>
@@ -67,14 +72,15 @@ If you have any questions, you can email us .<br>
   : <soniasebastian011@gmail.com><br>
   : <bala12rajni@gmail.com><br>
   : <swathi.vinod@gmail.com><br>
-  : <sumanpreetk01@gmail.com>
+  : <sumanpreetk01@gmail.com><br>
+  : <cinco.de.abby@gmail.com><br>
 
    ## Important Link
 
 You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.<br>
-
+https://dry-badlands-70011-5660fc692bea.herokuapp.com/
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.<br>
 https://github.com/sumanpreetk01/FreshFit-Express<br>
