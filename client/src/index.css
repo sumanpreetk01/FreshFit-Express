@@ -43,8 +43,17 @@ code {
   font-size: 35px;
 }
 
-/* .Category-menu-button{
-  margin: '10px';
-  background-color: '#4a2c2a';
-  color: 'white';
-} */
+@media screen and (max-width: 698px) {
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    float: center;
+   
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+}
