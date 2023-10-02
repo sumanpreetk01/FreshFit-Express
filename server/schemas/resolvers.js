@@ -144,7 +144,7 @@ const resolvers = {
       addOrder: async (parent, { items }, context) => {
         console.log(context);
         if (context.user) {
-          const order = new Order({ items });
+          const order = new Order({ Item :items });
   
           await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
   
@@ -154,7 +154,7 @@ const resolvers = {
         throw new AuthenticationError('Not logged in');
       },
       updateUser: async (parent, args, context) => {
-        if (context.user) {
+        if (context.authorization) {
           return await User.findByIdAndUpdate(context.user._id, args, { new: true });
         }
   

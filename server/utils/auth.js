@@ -13,7 +13,7 @@ module.exports = {
     authMiddleware: function (req) {
         console.log( req);
         let token = (req.query && req.query.token) || (req.headers && req.headers.authorization);
-
+        
         if(!token) {
             return req;
         }
@@ -24,7 +24,7 @@ module.exports = {
         if(!token) {
             // return res.status(400).json({message: "You have no token"});
         }
-
+        
         //verify token and get user data out of it
         try {
             const {data} = jwt.verify(token, secret, {maxAge: expiration});
@@ -40,5 +40,11 @@ module.exports = {
   
       return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
     },
+
+    // getUserDataFromToken: function(token) {
+    //     const {data} = jwt.verify(token, secret, {maxAge: expiration});
+    //     return data;
+    // }
+    
   };
     
