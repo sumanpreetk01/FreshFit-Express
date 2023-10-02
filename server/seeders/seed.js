@@ -500,7 +500,7 @@ db.once('open', async () => {
     description:
       "As the chicken cooks low and slow, the green garlic and turns into a crispy crumb topping.",
       image:"Garlic-Rubbed-Buttery-Roast-Chicken.webp",
-      price: .99,
+      price: 9.99,
     quantity: 1,
     category: categories[5]._id
   },
@@ -553,7 +553,7 @@ db.once('open', async () => {
     description:
       "The flavors of this fish are out of control—super spicy, super intense, super delicious.",
       image:"Sichuan-Boiled-Fish.jpeg",
-      price: .99,
+      price: 11.99,
     quantity: 1,
     category: categories[5]._id
   },
@@ -635,7 +635,7 @@ db.once('open', async () => {
     description:
       "There's no need to miss out on cheesecake with this healthier, no-bake recipe.",
       image:"healthier-no-bake-fruity-cheesecake-tarts.jpeg",
-      price: 87.99,
+      price: 7.99,
     quantity: 1,
     category: categories[6]._id
   },
