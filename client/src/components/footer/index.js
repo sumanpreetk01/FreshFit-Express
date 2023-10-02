@@ -25,7 +25,7 @@ function Footer() {
             </div>
             </a>
                  <div className='social-media-links'>
-                <a href='https://instagram.c om'><img src={instagramLogo} alt="Follow us on Instagram"/></a>
+                <a href='https://instagram.com'><img src={instagramLogo} alt="Follow us on Instagram"/></a>
                 <a href='https://facebook.com'><img src={facebookLogo} alt="Follow us on Facebook"/></a>
                 <a href='https://www.twitter.com'><img src={twitterLogo} alt="Follow us on Twitter"/></a>
                 </div>
