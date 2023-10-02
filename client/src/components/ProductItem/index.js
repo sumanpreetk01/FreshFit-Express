@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { pluralize } from "../../utils/helpers"
+
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
@@ -16,7 +16,7 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    quantity
+   
   } = item;
 
   const { cart } = state
@@ -57,7 +57,7 @@ function ProductItem(item) {
           {name}
         </Typography>
         <Typography gutterBottom variant="h5" component="h2"
-        style={{ marginLeft: '30px', display: 'flex', flexDirection: "colunmn" }}>
+        style={{ marginLeft: '30px', display: 'flex', flexDirection: "colunmn" ,color:'grey' }}>
           ${price}
         </Typography>
 
