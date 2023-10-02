@@ -4,11 +4,6 @@ import Freshlogo from "../../assets/FreshFitExpressLogo.png"
 import facebookLogo from "../../assets/facebooklogo.png"
 import instagramLogo from "../../assets/instagramlogo.png"
 import twitterLogo from "../../assets/twitterlogo.png"
-// import { Box, Typography } from '@mui/material'
-
-
-
-
 
 function Footer() {
     return(
@@ -24,8 +19,8 @@ function Footer() {
             </h2>
             </div>
             </a>
-                 <div className='social-media-links'>
-                <a href='https://instagram.c om'><img src={instagramLogo} alt="Follow us on Instagram"/></a>
+                <div className='social-media-links'>
+                <a href='https://instagram.com'><img src={instagramLogo} alt="Follow us on Instagram"/></a>
                 <a href='https://facebook.com'><img src={facebookLogo} alt="Follow us on Facebook"/></a>
                 <a href='https://www.twitter.com'><img src={twitterLogo} alt="Follow us on Twitter"/></a>
                 </div>

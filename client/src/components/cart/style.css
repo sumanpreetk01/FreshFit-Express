@@ -10,6 +10,7 @@
     padding: 10px;
     box-shadow: -1px 0 5px rgba(0, 0, 0, .5);
     border-top-left-radius: 10px;
+    z-index: 5;
   }
   
 .cart-container h2 {
@@ -49,6 +50,7 @@
     padding: 10px;
     width: 30px;
     height: 30px;
+    z-index: 5;
   }
   .cart-icon {
     color: #d8e7db;
