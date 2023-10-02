@@ -6,9 +6,7 @@
     position: relative;
    
     width: 100%;
-    z-index: 1;
-    margin-bottom: 5px;
-    position: fixed;
+ 
 }
 
 .footer-logo {
