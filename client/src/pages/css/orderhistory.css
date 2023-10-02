@@ -4,7 +4,8 @@
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 300px;
+    background-color: #fff;
   }
   
   .flex-row {
@@ -13,3 +14,17 @@
     flex-wrap: wrap;
    
   }
+
+  .my-2 {
+    background-color: #d8e7db;
+  }
+
+  .flex-row Link, p, a{
+    text-decoration: none;
+    font-family: inherit;
+    color: #2e5136;
+  }
+
+/* .order-history {
+  text-decoration: none;
+} */
