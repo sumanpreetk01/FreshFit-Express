@@ -3,11 +3,12 @@
     color: #d8e7db;
     padding: 20px;
     text-align: center;
-    position: relative;
     width: 100%;
     z-index: 1;
-    margin-bottom: 5px;
     position: fixed;
+    flex-direction: column;
+    height: auto;
+    bottom: 0;
 }
 
 .footer-logo {
