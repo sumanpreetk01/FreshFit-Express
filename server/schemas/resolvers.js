@@ -54,9 +54,17 @@ const resolvers = {
         throw new AuthenticationError('Not logged in');
       },
       checkout: async (parent, args, context) => {
-
-        // const url = new URL(context.headers.referer).origin;
-        
+        console.log("context" + context.req.rawHeaders[1]);
+        console.log("-----------------------------------------------------------------------------------");
+        for (let key in context.req) {
+          // console.log(key + "; ;;;;;;;;;;;;;;;;;");
+          // if (context.hasOwnProperty(key)) {
+          //   console.log(key + ";;;;;;;;;;;;;;;;;;");
+          //   console.log(context[key]);
+          // }
+        }
+        const url = new URL(context.req.rawHeaders[1]);
+        console.log("------------------------------ -------------------------------------------------------" + url);
         const order = new Order({ Item: args.items });
         console.log(order);
         const line_items = [];
@@ -85,8 +93,8 @@ const resolvers = {
           payment_method_types: ['card'],
           line_items,
           mode: 'payment',
-          success_url: `http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}`,
-          cancel_url: `http://localhost:3000/`
+          success_url: `http://${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `http://${url}/`
         });
   
         return { session: session.id };
