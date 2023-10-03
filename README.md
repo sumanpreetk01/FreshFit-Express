@@ -1,3 +1,11 @@
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.4-green.svg)](https://www.mongodb.com/)
+[![ExpressJS](https://img.shields.io/badge/ExpressJS-4.x-orange.svg)](https://expressjs.com/)
+[![ReactJS](https://img.shields.io/badge/ReactJS-17-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-14.x-green.svg)](https://nodejs.org/)
+[![GraphQL](https://img.shields.io/badge/GraphQL-15-pink.svg)](https://graphql.org/)
+[![Stripe](https://img.shields.io/badge/Stripe-Latest-blue.svg)](https://stripe.com/)
+[![Material UI](https://img.shields.io/badge/Material%20UI-5.0-%230081CB)](https://material-ui.com/)
+
 # FreshFit-Express
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue.svg)](https://opensource.org/licenses/MIT)
@@ -13,6 +21,8 @@ A platform for heathy food that allows users to browse the menu, add items to a 
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
+- [Demo](#demo)
+- [Screenshots](#Screenshots)
 - [Test](#test)
 - [Questions](#questions)
 
@@ -52,19 +62,29 @@ This app is covered under MIT license. For details and limitations of this licen
 
 ## Contributing
 This app has been possible with great work and contribution of the following colleagues:<br>
--   Sonia Sebastian [GitHub - link](https://github.com/soniasebastian)<br>-Schemas - (resolvers,typeDefs) ,Utils are done by Sonia
--  Rajni bala [GitHub - link](https://github.com/rbala16)<br>-Models/seeds/config/server.js,
-- Suman Preet [GitHub - link](https://github.com/sumanpreetk01)<br>-Utils ( auth, helpers, mutations, queries, reducers )  by    Suman<br>
--  Swathi Vinod [GitHub - link](https://github.com/SwathiVinod19)<br>-Pages (landing page, menu, contact page, checkout page) are done by Swathi,<br>
--  Abigail Cinco [GitHub - link](https://github.com/abi-gail17)<br>Components (navbar, cart, footer/page-login & sign up page, logo) are done by 
+-   Sonia Sebastian [GitHub - link](https://github.com/soniasebastian)<br>-Schemas: resolvers & typeDefs, Back-end Utils folder: auth , Stripe implementation, Components: ProductList are done by Sonia
+-  Rajni bala [GitHub - link](https://github.com/rbala16)<br>-All models, seed data, config , server.js and ReadMe,
+- Suman Preet [GitHub - link](https://github.com/sumanpreetk01)<br>-Front-end Utils: auth, helpers, mutations, queries, reducers, Components: ProductItem by Sumanpreet<br>
+-  Swathi Vinod [GitHub - link](https://github.com/SwathiVinod19)<br>-Pages: Landing page, Menu page, Contact page, OrderHistory page, Components: ContactForm, CategoryMenu are done by Swathi,<br>
+-  Abigail Cinco [GitHub - link](https://github.com/abi-gail17)<br>Components: navbar, footer, cart, casrtItem, Pages: Login & sign up page, are done by Abigail
 
+Everyone did their share of debugging every part of the project.
 
-## Mockup
+## Demo
 The following screenshoot demonstrates the application functionality:
-[demo1](./demo1.png)
-[demo1](./demo2.png)
-[demo1](./demo3.png)
-[demo1](./demo4.png)
+[Demo Video](https://drive.google.com/file/d/1SBLNh10dQQzux0LnC2Ge7eaF6oSUAi9E/view)
+
+## Screenshots 
+
+Here are some screenshots of the app 
+
+![projectThree-LandingPage](https://github.com/sumanpreetk01/FreshFit-Express/assets/129353324/6aebc604-836e-4bea-a70e-78c73fc90454)
+
+![projectThree-MenuOptions](https://github.com/sumanpreetk01/FreshFit-Express/assets/129353324/b55f37e5-e281-42c7-967a-771ddfd88470)
+
+![projectThree-Cart](https://github.com/sumanpreetk01/FreshFit-Express/assets/129353324/f0aa8920-0ab6-4f30-aa65-7a152290b7d4)
+
+![projectThree-Stripe](https://github.com/sumanpreetk01/FreshFit-Express/assets/129353324/23799599-db3a-4668-8dee-4bd30e178917)
 
 ## Questions
 If you have any questions, you can email us .<br>
